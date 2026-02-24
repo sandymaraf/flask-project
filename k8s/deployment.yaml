@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: sandymaraf/flask-project:latest
+          image: sandymaraf/flask-project:8dcb12e07
           imagePullPolicy: Always
 
           ports:
