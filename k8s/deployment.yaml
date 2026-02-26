@@ -16,7 +16,10 @@ spec:
       containers:
         - name: app
           image: sandymaraf/flask-project:8dcb12e0752b603fab6f1bb9baf9fa0a33d23fa1
-          imagePullPolicy: Always
+
+          envFrom:
+            - configMapRef:
+                name: flask-project-config
 
           ports:
             - containerPort: 8080
