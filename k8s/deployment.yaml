@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-project
+  namespace: flask
 spec:
   replicas: 1
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: sandymaraf/flask-project:8dcb12e07
+          image: sandymaraf/flask-project:8dcb12e0752b603fab6f1bb9baf9fa0a33d23fa1
           imagePullPolicy: Always
 
           ports:
